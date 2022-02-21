@@ -18,6 +18,10 @@ services:
      replicas: 1
      restart_policy:
       condition: on-failure
+     resources:
+        limits:
+          cpus: '0.1'
+          memory: "256M"
     networks:
       - jaeger
       - kafka
@@ -45,6 +49,10 @@ services:
      replicas: 1
      restart_policy:
       condition: on-failure
+     resources:
+        limits:
+          cpus: '0.1'
+          memory: "256M"
     networks:
       - jaeger
       - kafka
@@ -62,6 +70,10 @@ services:
      mode: global
      restart_policy:
       condition: on-failure
+     resources:
+        limits:
+          cpus: '0.1'
+          memory: "256M"
     ports:
       - "5775:5775/udp"
       - "6831:6831/udp"
@@ -83,6 +95,10 @@ services:
      replicas: 1
      restart_policy:
       condition: on-failure
+     resources:
+        limits:
+          cpus: '0.1'
+          memory: "256M"
     ports:
       - "16686:16686/tcp"
     networks:
