@@ -26,10 +26,10 @@ services:
       - jaeger
       - kafka
       - elasticsearch
-    #ports:
+    ports:
     #  - "14250:14250"
     #  - "14267:14267"
-    #  - "14268:14268"
+      - "14268:14268"
     #  - "9411:9411"
     environment:     
      - SERVICE_NAME=jaeger-collector
